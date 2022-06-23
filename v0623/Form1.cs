@@ -23,6 +23,12 @@ namespace v0623
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Point spos = MousePosition;
+            Point fpos = PointToClient(spos);
+            label3.Left = spos.X-label3.Width/2;
+            label3.Top = spos.Y-label3.Height/2;
+            label3.Text = $"{fpos.X},{fpos.Y}";
+
             label1.Left += vx;
             label1.Top += vy;
 
@@ -54,6 +60,11 @@ namespace v0623
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
