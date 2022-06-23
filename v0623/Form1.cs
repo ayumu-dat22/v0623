@@ -27,7 +27,7 @@ namespace v0623
             Point fpos = PointToClient(spos);
             label3.Left = spos.X-label3.Width/2;
             label3.Top = spos.Y-label3.Height/2;
-            label3.Text = $"{fpos.X},{fpos.Y}";
+            //label3.Text = $"{fpos.X},{fpos.Y}";
 
             label1.Left += vx;
             label1.Top += vy;
@@ -55,8 +55,8 @@ namespace v0623
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            timer1.Enabled = !timer1.Enabled;
             MessageBox.Show("町田");
-            timer1.Enabled=!timer1.Enabled;
         }
 
         private void label2_Click(object sender, EventArgs e)
