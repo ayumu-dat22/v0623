@@ -28,21 +28,21 @@ namespace v0623
 
             if(label1.Left<0)
             {
-                vx = -vx;
+                vx = Math.Abs(vx)*110/100;
             }
             if(label1.Top<0)
             {
-                vy = -vy;
+                vy = Math.Abs(vy)*110/100;
             }
             if(label1.Right > ClientSize.Width)
             {
-                vx = -vx;
+                vx = -Math.Abs(vx)*110/100;
             }
             if(label1.Bottom> ClientSize.Height)
             {
-                vy = -vy;
+                vy = -Math.Abs(vy)*110/100;
             }
-
+            
             score--;
             label2.Text = $"SCORE{ score}";
         }
